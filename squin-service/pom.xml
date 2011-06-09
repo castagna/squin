@@ -27,7 +27,7 @@
   <groupId>org.squin</groupId>
   <artifactId>squin-service</artifactId>
   <version>0.1.4-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   
   <name>SQUIN - Service</name>
 
@@ -47,6 +47,23 @@
     </dependency>
 
   </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jetty.version}</version>
+        <configuration>
+          <scanIntervalSeconds>1</scanIntervalSeconds>
+          <webAppConfig>
+            <contextPath>/</contextPath>
+            <tempDirectory>${project.build.directory}/work</tempDirectory>
+          </webAppConfig>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
 
