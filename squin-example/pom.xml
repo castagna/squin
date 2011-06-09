@@ -25,11 +25,11 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.squin</groupId>
-  <artifactId>squin-service</artifactId>
+  <artifactId>squin-example</artifactId>
   <version>0.1.4-SNAPSHOT</version>
   <packaging>jar</packaging>
-  
-  <name>SQUIN - Service</name>
+
+  <name>SQUIN - Example</name>
 
   <dependencies>
 
@@ -39,14 +39,27 @@
       <version>${project.version}</version>
     </dependency>
 
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>${servlet-api.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-eclipse-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
 

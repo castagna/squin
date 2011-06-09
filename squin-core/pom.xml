@@ -29,6 +29,8 @@
   <version>0.1.4-SNAPSHOT</version>
   <packaging>jar</packaging>
 
+  <name>SQUIN - Core</name>
+
   <dependencies>
 
     <dependency>
@@ -38,10 +40,20 @@
     </dependency>
     
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
+      <groupId>net.rootdev</groupId>
+      <artifactId>java-rdfa</artifactId>
+      <version>${java-rdfa.version}</version>
+      <scope>compile</scope>
+      <optional>true</optional>
     </dependency>
+
+    <dependency>
+      <groupId>net.rootdev</groupId>
+      <artifactId>java-rdfa-htmlparser</artifactId>
+      <version>${java-rdfa.version}</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+   </dependency>
 
     <dependency>
       <groupId>junit</groupId>
@@ -84,6 +96,10 @@
       </plugin>
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

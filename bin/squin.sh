@@ -1,4 +1,5 @@
 #!/bin/bash
+
 SQUIN_ROOT=${0%/*}/..
 ARQ_LIBS=/home/olaf/AdditionalSoftware/ARQ/lib
 JAVA_RDFa_JAR=/home/olaf/java-rdfa-0.4.1.jar
