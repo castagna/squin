@@ -1,0 +1,15 @@
+<projectDescription>
+  <name>squin-service</name>
+  <comment>SQUIN is a query interface for the Web of Linked Data. The query system in SQUIN implements a novel query execution paradigm called link traversal based query execution.</comment>
+  <projects>
+    <project>squin-core</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>
