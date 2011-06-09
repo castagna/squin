@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/squin/!svn/ver/344/squin/trunk/src/org/squin/lookup/urisearch/impl
+END
+QueryProcessingException.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/squin/!svn/ver/344/squin/trunk/src/org/squin/lookup/urisearch/impl/QueryProcessingException.java
+END
+QueryProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/squin/!svn/ver/344/squin/trunk/src/org/squin/lookup/urisearch/impl/QueryProcessor.java
+END
+URISearchTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/squin/!svn/ver/344/squin/trunk/src/org/squin/lookup/urisearch/impl/URISearchTask.java
+END
+URISearchManagerBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/squin/!svn/ver/344/squin/trunk/src/org/squin/lookup/urisearch/impl/URISearchManagerBase.java
+END

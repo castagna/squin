@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/arq-2.8.8.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/icu4j-3.4.4.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/iri-0.8.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/jena-2.6.4.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/junit-4.5.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/lucene-core-2.3.1.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/wstx-asl-3.2.9.jar"/>
+	<classpathentry kind="lib" path="ARQ-2.8.8/lib/xercesImpl-2.7.1.jar"/>
+	<classpathentry kind="lib" path="servlet/lib/commons-logging-1.1.1-api.jar"/>
+	<classpathentry kind="lib" path="servlet/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>
