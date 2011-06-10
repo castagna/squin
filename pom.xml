@@ -119,6 +119,36 @@
           </executions>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <author>true</author>
+            <version>true</version>
+            <show>public</show>
+            <quiet>true</quiet>
+            <use>true</use>
+            <splitindex>true</splitindex>
+            <encoding>UTF-8</encoding>
+            <windowtitle>${project.name} (v.${project.version})</windowtitle>
+            <doctitle>${project.name} (v.${project.version})</doctitle>
+            <bottom>Copyright &#169; 2008 - 2011 Olaf Hartig &lt;hartig@informatik.hu-berlin.de&gt;</bottom> 
+            <links>
+              <link href="http://openjena.org/javadoc/"/>
+              <link href="http://openjena.org/ARQ/javadoc/"/>
+              <link href="http://download.oracle.com/javase/1.6.0/docs/api/"/>
+              <link href="http://download.oracle.com/javaee/6/api/"/>
+            </links>
+          </configuration>
+        </plugin>
+        <plugin>
           <artifactId>maven-eclipse-plugin</artifactId>
           <configuration>
            <buildOutputDirectory>${project.build.directory}/classes-eclipse</buildOutputDirectory>
