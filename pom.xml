@@ -18,7 +18,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.squin</groupId>
-  <artifactId>squin-parent-pom</artifactId>
+  <artifactId>squin</artifactId>
   <version>0.1.4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -31,6 +31,7 @@
     <servlet-api.version>2.5</servlet-api.version>
     <java-rdfa.version>0.4.2-RC2</java-rdfa.version>
     <jetty.version>7.4.0.v20110414</jetty.version>
+    <slf4j.version>1.5.8</slf4j.version>
     <junit.version>4.8.2</junit.version>
     <jdk.version>1.6</jdk.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -264,6 +265,70 @@ build.time.txt=${build.time.txt}
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>jetty-offline</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.2-beta-5</version>
+            <configuration>
+              <finalName>squin-webapp-${project.version}</finalName>
+              <attach>false</attach>
+              <descriptors>
+                <descriptor>src/main/assembly/squin-service.xml</descriptor>
+              </descriptors>
+            </configuration>
+            <executions>
+              <execution>
+                <id>make-assembly</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+      <dependencies>
+        <dependency>
+          <groupId>org.squin</groupId>
+          <artifactId>squin-service</artifactId>
+          <version>${project.version}</version>
+        </dependency>
+        <!-- logging ... -->
+        <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+          <version>${slf4j.version}</version>
+        </dependency>
+        <!-- embedded jetty -->
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-server</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-start</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-util</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-jsp-2.1</artifactId>
+          <version>${jetty.version}</version>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 
   <modules>
     <module>squin-core</module>
