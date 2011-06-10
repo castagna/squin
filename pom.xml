@@ -294,11 +294,6 @@ build.time.txt=${build.time.txt}
         </plugins>
       </build>
       <dependencies>
-        <dependency>
-          <groupId>org.squin</groupId>
-          <artifactId>squin-service</artifactId>
-          <version>${project.version}</version>
-        </dependency>
         <!-- logging ... -->
         <dependency>
           <groupId>org.slf4j</groupId>

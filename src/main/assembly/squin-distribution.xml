@@ -10,10 +10,24 @@
     <moduleSet>
       <binaries>
         <includeDependencies>true</includeDependencies>
-        <outputDirectory>lib</outputDirectory>
         <unpack>false</unpack>
         <dependencySets>
-          <dependencySet/>
+          <dependencySet>
+            <outputDirectory>lib</outputDirectory>
+            <excludes>
+              <exclude>org.squin:squin-core</exclude>
+              <exclude>org.squin:squin-service</exclude>
+              <exclude>org.squin:squin-example</exclude>
+            </excludes>
+          </dependencySet>
+          <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+              <include>org.squin:squin-core</include>
+              <include>org.squin:squin-service</include>
+              <include>org.squin:squin-example</include>
+            </includes>
+          </dependencySet>
         </dependencySets>
       </binaries>
     </moduleSet>
@@ -29,11 +43,22 @@
         <exclude>**/*.log</exclude>
         <exclude>**/*.log.*</exclude>
         <exclude>**/*.classpath</exclude>
+        <exclude>**/pom.xml</exclude>
+        <exclude>**/src/**</exclude>
+        <exclude>**/squin-*/**</exclude>
       </excludes>
     </fileSet>
     <fileSet>
-      <directory>${project.build.directory}/site</directory>
-      <outputDirectory>docs</outputDirectory>
+      <directory>${project.basedir}/squin-core/target/apidocs</directory>
+      <outputDirectory>docs/javadoc</outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>${project.basedir}/src/jetty/resources</directory>
+      <outputDirectory>etc</outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>${project.basedir}/src/jetty/bin</directory>
+      <outputDirectory>/</outputDirectory>
     </fileSet>
   </fileSets>
 </assembly>
